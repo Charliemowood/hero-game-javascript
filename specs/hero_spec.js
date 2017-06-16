@@ -27,8 +27,8 @@ describe('Hero', function() {
     assert.strictEqual("My name is Garry", hero.talk());
   });
 
-  xit('hero should have a collection of tasks to complete', function() {
-    assert.strictEqual([], hero.collectionOfTasks)
+  it('hero should have a collection of tasks to complete', function() {
+    assert.deepEqual([], hero.collectionOfTasks)
   });
 
 
