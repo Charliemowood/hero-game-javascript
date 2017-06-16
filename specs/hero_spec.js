@@ -8,7 +8,7 @@ describe('Hero', function() {
 
 
   beforeEach(function() {
-    hero = new Hero("Garry");
+    hero = new Hero("Garry", "Banana");
   });
 
   it('hero should have a name', function() {
@@ -19,11 +19,11 @@ describe('Hero', function() {
     assert.strictEqual(100, hero.health);
   });
 
-  xit('hero should have favorite food', function(done) {
+  it('hero should have favorite food', function() {
     assert.strictEqual("Banana", hero.favorite)
   });
 
-  xit('hero should have a collection of tasks to complete', function(done) {
+  xit('hero should have a collection of tasks to complete', function() {
     assert.strictEqual([], hero.collectionOfTasks)
   });
 
