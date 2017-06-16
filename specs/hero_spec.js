@@ -23,6 +23,10 @@ describe('Hero', function() {
     assert.strictEqual("Banana", hero.favorite)
   });
 
+  it('hero should be able to say their name', function() {
+    assert.strictEqual("My name is Garry", hero.talk());
+  });
+
   xit('hero should have a collection of tasks to complete', function() {
     assert.strictEqual([], hero.collectionOfTasks)
   });
