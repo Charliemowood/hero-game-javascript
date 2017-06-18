@@ -22,8 +22,13 @@ describe('Task', function() {
     assert.strictEqual(1, task.reward)
   });
 
+  it('task should start off not completed', function() {
+    assert.strictEqual(false, task.completeStatus)
+  });
+
   xit('should be able to mark a task completed', function() {
-    assert.strictEqual(true. task.complete());
+    task.complete()
+    assert.strictEqual(true, task.completeStatus);
   });
 
 
