@@ -10,6 +10,7 @@ describe('Hero', function() {
   beforeEach(function() {
     hero = new Hero("Garry", "Banana");
     food = new Food("Banana", 10);
+    food1 = new Food("Chocolate", 10);
   });
 
   it('hero should have a name', function() {
@@ -33,11 +34,13 @@ describe('Hero', function() {
   });
 
   it('hero should be able to eat food, and health should go up by the replenishment value', function() {
-    hero.eat(food);
+    hero.eat(food1);
     assert.strictEqual(110, hero.health);
   });
 
-  xit('When the hero eats food if it is their favourite food, their health should go up by 1.5 * value', function() {
+  it('When the hero eats food if it is their favourite food, their health should go up by 1.5 * value', function() {
+    hero.eat(food);
+    assert.strictEqual(115, hero.health)
   });
 
   xit('Hero should be able to sort their tasks by difficulty, urgency or reward', function() {
