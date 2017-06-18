@@ -5,4 +5,10 @@ var Task = function (difficulty, urgency, reward) {
   this.completeStatus = false;
 }
 
+Task.prototype = {
+  complete: function() {
+    this.completeStatus = true;
+  }
+}
+
 module.exports = Task;
