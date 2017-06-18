@@ -7,14 +7,14 @@ var task;
 describe('Task', function() {
 
   beforeEach(function () {
-    task = new Task(1);
+    task = new Task(1, 1);
   });
 
   it('should have a difficulty', function() {
     assert.strictEqual(1, task.difficulty)
   });
 
-  xit('should have an urgency', function() {
+  it('should have an urgency', function() {
     assert.strictEqual(1, task.urgency)
   });
 
