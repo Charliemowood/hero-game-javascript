@@ -1,10 +1,10 @@
 var assert = require('assert');
 var Task = require('../task.js')
 
-var task;
-
 
 describe('Task', function() {
+
+  var task;
 
   beforeEach(function () {
     task = new Task(1, 1, 1);
