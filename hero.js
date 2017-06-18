@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 var Hero = function (name, food) {
   this.name = name;
   this.health = 100;
@@ -15,6 +17,9 @@ Hero.prototype =  {
     } else {
       this.health += food.replenishValue;
     }
+  },
+  add: function (task) {
+    this.collectionOfTasks.push(task);
   }
 }
 
