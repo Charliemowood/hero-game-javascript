@@ -1,12 +1,15 @@
 var assert = require('assert');
 var Hero = require('../hero.js');
+var Food = require('../food.js')
 
 describe('Hero', function() {
 
   var hero;
+  var food;
 
   beforeEach(function() {
     hero = new Hero("Garry", "Banana");
+    food = new Food("Banana", 10);
   });
 
   it('hero should have a name', function() {
@@ -29,7 +32,9 @@ describe('Hero', function() {
     assert.deepEqual([], hero.collectionOfTasks)
   });
 
-  xit('hero should be able to eat food, and health should go up by the replenishment value', function() {
+  it('hero should be able to eat food, and health should go up by the replenishment value', function() {
+    hero.eat(food);
+    assert.strictEqual(110, hero.health);
   });
 
   xit('When the hero eats food if it is their favourite food, their health should go up by 1.5 * value', function() {
